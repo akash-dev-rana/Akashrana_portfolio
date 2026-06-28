@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akash_portfolio</title>
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+      background-color: #0f172a;
+
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    background: transparent;
+    z-index: 1000;
+    font-size: 18px;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+
+}
+nav a:hover{
+    color:#1e5f74;
+    text-shadow: 0 0 10px rgba(0,0,0,0.3);
+    font-size: 16px;
+}
+nav a div {
+   padding: 20px;
+}
+
+
+.resume{
+    opacity: 0;
+    animation: showItem 1s forwards;
+    animation-delay: 1s;
+}
+
+.mywork{
+    opacity: 0;
+    animation: showItem 1s forwards;
+    animation-delay: 2s;
+}
+.contact{
+    opacity: 0;
+    animation: showItem 1s forwards;
+    animation-delay: 3s;
+}
+@keyframes showAkash{
+    from{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes showItem{
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.hero{
+    position:relative;
+    height:100vh;
+    overflow:hidden;
+    background:#0f172a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+#particles{
+    position:absolute;
+    inset:0;
+}
+
+.hero-content{
+    position:relative;
+    z-index:10;
+}
+
+.hero-name{
+    font-size:8rem;
+    color:#38bdf8;
+    letter-spacing:10px;
+    text-shadow:
+        0 0 20px #38bdf8,
+        0 0 40px #38bdf8;
+    animation:fadeIn 2s ease;
+}
+
+.typing{
+    margin-top:20px;
+    color:white;
+    font-size:2rem;
+    min-height:50px;
+}
+
+.cursor{
+    animation:blink .7s infinite;
+}
+
+.hero-desc{
+    margin-top:20px;
+    color:#94a3b8;
+    font-size:1.1rem;
+}
+
+.explore-btn{
+    margin-top:40px;
+    padding:15px 30px;
+    border:none;
+    border-radius:40px;
+    background:#38bdf8;
+    color:#0f172a;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.explore-btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 25px #38bdf8;
+}
+
+.floating-skills span{
+    position:absolute;
+    color:#a78bfa;
+    font-weight:bold;
+    animation:float 6s infinite ease-in-out;
+}
+
+.floating-skills span:nth-child(1){
+    top:20%;
+    left:15%;
+}
+
+.floating-skills span:nth-child(2){
+    top:30%;
+    right:20%;
+}
+
+.floating-skills span:nth-child(3){
+    top:65%;
+    left:10%;
+}
+
+.floating-skills span:nth-child(4){
+    top:75%;
+    right:15%;
+}
+
+.floating-skills span:nth-child(5){
+    top:15%;
+    right:40%;
+}
+
+.floating-skills span:nth-child(6){
+    bottom:20%;
+    left:30%;
+}
+
+.floating-skills span:nth-child(7){
+    bottom:25%;
+    right:35%;
+}
+
+.floating-skills span:nth-child(8){
+    top:50%;
+    left:5%;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-20px);
+    }
+}
+
+@keyframes blink{
+    50%{
+        opacity:0;
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    background: #d4a017;
+    color: #38bdf8;
+    cursor: pointer;
+    font-weight: bold;
+}
+.work-title{
+    text-align:center;
+    font-size:4rem;
+    margin-bottom:60px;
+
+    color:#38bdf8;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    text-shadow:
+        0 0 10px rgba(56,189,248,.5),
+        0 0 20px rgba(56,189,248,.3);
+
+    position:relative;
+}
+
+cont {
+    min-height: 100vh;
+    background-color: #38bdf8;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.card_cont h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.card_cont p {
+    font-size: 1.2rem;
+    max-width: 700px;
+}
+.cont {
+    min-height: 80vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease forwards;
+    animation-timeline: view();
+    animation-range: entry 20%;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+  .carousel {
+    display: flex;
+    gap: 18px;
+    padding: 20px;
+    overflow-x: auto;
+    width: 92%;
+  }
+
+  .card {
+    flex: 0 0 260px;
+    height: 380px;
+    background: #1e293b;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+  }
+
+    .image-box {
+    height: 55%;
+    background-color: #1e5f74;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    position: relative;
+  }
+
+
+  .card:hover .image-box {
+    transform: translateY(-12px) scale(1.08);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    z-index: 5;
+  }
+
+  .card_content {
+    padding: 14px;
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+
+  .desc {
+    font-size: 13px;
+    color:white;
+    line-height: 1.4;
+  }
+
+  .btn {
+    margin-top: 12px;
+    display: inline-block;
+    padding: 10px 12px;
+    background: #1e5f74;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+
+  .btn:hover {
+    background: #f0d98a;
+    transform: translateY(-2px);
+  }
+
+.section2{
+    opacity:0;
+    transform:translateY(80px);
+    margin-top: 0px;
+    animation:fadeInUp linear forwards;
+    animation-timeline:view();
+    animation-range:entry 20%;
+
+}
+.section2{
+    min-height:50vh;
+    padding:100px 10%;
+}
+
+.resume-title{
+       text-align:center;
+    font-size:4rem;
+    margin-bottom:60px;
+
+    color:#38bdf8;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    text-shadow:
+        0 0 10px rgba(56,189,248,.5),
+        0 0 20px rgba(56,189,248,.3);
+
+    position:relative;
+}
+
+.resume-card{
+    background:white;
+    padding:40px;
+    margin-bottom:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+    opacity:0;
+    transform:translateY(50px);
+
+    animation:fadeInUp linear forwards;
+    animation-timeline:view();
+    animation-range:entry 20%;
+}
+
+.resume-card h2{
+    margin-bottom:20px;
+   
+}
+
+.resume-card h3{
+    margin-top:20px;
+    color:#1e5f74;
+}
+
+.resume-card ul{
+    margin-top:10px;
+    padding-left:25px;
+}
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}x
+.cont,
+.section2{
+    background-color: #0f172a;
+}
+ .contact-section{
+    min-height:80vh;
+    background:#0f172a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:100px 8%;
+    overflow:hidden;
+}
+
+.contact-container{
+    width:100%;
+    max-width:1400px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+}
+
+.contact-left{
+    animation:slideLeft 1.2s ease forwards;
+}
+
+.contact-left h1{
+    font-size:4rem;
+    color:#38bdf8;
+    margin-bottom:20px;
+
+    text-shadow:
+        0 0 15px #38bdf8;
+}
+
+.contact-left p{
+    color:#cbd5e1;
+    font-size:1.1rem;
+    margin-bottom:40px;
+}
+
+.contact-info{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.info-card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:15px;
+    color:white;
+
+    border:1px solid rgba(56,189,248,.3);
+
+    transition:.4s;
+}
+
+.info-card:hover{
+    transform:translateX(15px);
+
+    box-shadow:
+        0 0 20px rgba(56,189,248,.4);
+}
+
+.contact-right{
+
+    background:#1e293b;
+
+    border-radius:25px;
+
+    padding:35px;
+
+    position:relative;
+
+    animation:slideRight 1.2s ease forwards;
+
+    overflow:hidden;
+}
+
+.contact-right::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-100%;
+
+    left:-100%;
+
+    width:300%;
+
+    height:300%;
+
+    background:
+    linear-gradient(
+        45deg,
+        transparent,
+        rgba(56,189,248,.15),
+        transparent
+    );
+
+    animation:scan 6s linear infinite;
+}
+
+.terminal-header{
+    color:#38bdf8;
+    font-size:1.3rem;
+    margin-bottom:25px;
+    position:relative;
+    z-index:2;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    position:relative;
+    z-index:2;
+}
+
+input,
+textarea{
+
+    background:#0f172a;
+
+    border:1px solid #334155;
+
+    padding:15px;
+
+    color:white;
+
+    border-radius:10px;
+
+    outline:none;
+
+    transition:.3s;
+}
+
+input:focus,
+textarea:focus{
+
+    border-color:#38bdf8;
+
+    box-shadow:
+        0 0 15px rgba(56,189,248,.4);
+}
+
+button{
+
+    background:#38bdf8;
+
+    color:#0f172a;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.4s;
+}
+
+button:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 0 25px #38bdf8;
+}
+.alert{
+    padding:15px;
+    margin-bottom:20px;
+    border-radius:10px;
+    font-weight:bold;
+    animation: pop 0.4s ease;
+}
+
+.alert.success{
+    background:#22c55e;
+    color:#0f172a;
+}
+
+@keyframes pop{
+    from{
+        transform:scale(0.8);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+</style>
+<body>
+    <nav>
+        <a href="" class="Akash">AKASH</a>
+        <div>
+        <a  style="padding: 15px;" class="resume" onclick="scrollToResume()">Resume</a>
+        <a  style="padding: 15px;" class="mywork" onclick="scrollToAbout()">myWork</a>
+        <a  class="contact" onclick="scrollToContact()">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+
+    <canvas id="particles"></canvas>
+
+    <div class="hero-content">
+
+        <h1 class="hero-name">AKASH</h1>
+
+        <h2 class="typing">
+            <span id="typed-text"></span>
+            <span class="cursor">|</span>
+        </h2>
+
+        <p class="hero-desc">
+            Network Technician • Linux Administrator • Full Stack Developer
+        </p>
+
+        <button class="explore-btn" onclick="scrollToAbout()">
+            Explore My Work ↓
+        </button>
+
+    </div>
+
+    <div class="floating-skills">
+        <span>Linux</span>
+        <span>Python</span>
+        <span>Django</span>
+        <span>Java</span>
+        <span>Networking</span>
+        <span>Security</span>
+        <span>SQL</span>
+        <span>PHP</span>
+    </div>
+
+</section>
+    <section class="cont" id="about">
+        <h1 class="work-title">
+    My Work
+</h1>
+
+<div class="carousel">
+
+  <div class="card">
+    <div class="image-box">Quickcash App</div>
+    <div class="card_content">
+      <div class="desc">An android app where people can look for jobs and employers can post jobs.
+          <ul>
+              <li>Android Studio</li>
+              <li>Maven & Junit</li>
+              <li>Google Firebase</li>
+          </ul>
+      </div>
+        <a class="btn" href="https://github.com/yourusername" target="_blank">View GitHub</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="image-box">Ecommerce Website</div>
+    <div class="card_content">
+      <div class="desc">Lets you shop all the products available on the website.
+        <ul style=" font-size: 13px;">
+            <li>Django</li>
+            <li>SQL</li>
+            <li>Angular Js</li>
+        </ul>
+    </div>
+      <a class="btn" href="https://github.com/yourusername" target="_blank">View GitHub</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="image-box">Task Manager</div>
+    <div class="card_content">
+      <div class="desc">A productivity tool for managing daily tasks.
+        <ul>
+            <li>Python</li>
+            <li>OOP</li>
+            <li>JSON</li>
+        </ul>
+    </div>
+      <a class="btn" href="https://github.com/yourusername" target="_blank">View GitHub</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="image-box">Project 4</div>
+    <div class="card_content">
+      <div class="title">Chat UI</div>
+      <div class="desc">A clean chat interface design concept.</div>
+      <a class="btn" href="https://github.com/yourusername" target="_blank">View GitHub</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="image-box">Project 5</div>
+    <div class="card_content">
+      <div class="title">Dashboard</div>
+      <div class="desc">Analytics dashboard with modern UI components.</div>
+      <a class="btn" href="https://github.com/yourusername" target="_blank">View GitHub</a>
+    </div>
+  </div>
+
+</div>
+
+    </section>
+
+
+<section class="section2" id="resume">
+    <div class="resume-container">
+
+        <h1 class="resume-title">Resume</h1>
+
+        <div class="resume-card">
+            <h2>Professional Summary</h2>
+
+            <p>
+                I'm a Network Technician graduate from St. Clair College with
+                hands-on experience in Linux administration, networking,
+                cybersecurity, database management, and full-stack development.
+                I enjoy solving technical problems, securing systems, and
+                building practical solutions that improve efficiency and reliability.
+            </p>
+        </div>
+
+        <div class="resume-card">
+            <h2>Internal Project Inventory System</h2>
+
+            <h3>Situation</h3>
+            <p>
+                Organizations often struggle to manage project records securely
+                while maintaining controlled file uploads and user access.
+            </p>
+
+            <h3>Task</h3>
+            <p>
+                Build and deploy a secure Linux-based inventory management platform.
+            </p>
+
+            <h3>Action</h3>
+            <ul>
+                <li>Configured Apache, PHP and MariaDB.</li>
+                <li>Hardened OpenSSH and disabled root login.</li>
+                <li>Created HTTPS virtual hosts.</li>
+                <li>Built a PHP inventory application.</li>
+                <li>Implemented SFTP-only file uploads.</li>
+                <li>Configured permissions and access controls.</li>
+            </ul>
+
+            <h3>Result</h3>
+            <p>
+                Delivered a secure inventory platform with controlled access,
+                secure uploads, and reliable database integration.
+            </p>
+        </div>
+
+        <div class="resume-card">
+            <h2>Yatzy Score Tracker Web Application</h2>
+
+            <h3>Situation</h3>
+            <p>
+                Players required a centralized platform for score management.
+            </p>
+
+            <h3>Task</h3>
+            <p>
+                Develop a secure full-stack score tracking system.
+            </p>
+
+            <h3>Action</h3>
+            <ul>
+                <li>Designed MySQL database structure.</li>
+                <li>Built PHP CRUD functionality.</li>
+                <li>Created dynamic leaderboards.</li>
+                <li>Implemented secure image uploads.</li>
+                <li>Developed admin authentication.</li>
+                <li>Added validation against malicious input.</li>
+            </ul>
+
+            <h3>Result</h3>
+            <p>
+                Produced a scalable application with secure score moderation
+                and automated ranking functionality.
+            </p>
+        </div>
+
+        <div class="resume-card">
+            <h2>Network Configuration & Security Lab</h2>
+
+            <h3>Situation</h3>
+            <p>
+                Enterprise networks require secure routing and traffic control.
+            </p>
+
+            <h3>Task</h3>
+            <p>
+                Configure and secure a simulated enterprise network.
+            </p>
+
+            <h3>Action</h3>
+            <ul>
+                <li>Configured OSPF routing.</li>
+                <li>Implemented ACLs.</li>
+                <li>Configured NAT.</li>
+                <li>Applied firewall policies.</li>
+                <li>Performed troubleshooting and analysis.</li>
+            </ul>
+
+            <h3>Result</h3>
+            <p>
+                Improved connectivity, security, and routing efficiency
+                throughout the network environment.
+            </p>
+        </div>
+
+        <div class="resume-card">
+            <h2>Work Experience</h2>
+
+            <h3>Administrative Assistant</h3>
+            <p>
+                Steele Ford Lincoln | Halifax, NS
+            </p>
+
+            <ul>
+                <li>Managed accounts payable and daily transactions.</li>
+                <li>Maintained financial records.</li>
+                <li>Improved inventory tracking processes.</li>
+                <li>Coordinated communication between departments.</li>
+            </ul>
+
+            <h3>Volunteer Tutor / Lab Assistant</h3>
+
+            <ul>
+                <li>Supported students in networking and programming courses.</li>
+                <li>Provided troubleshooting assistance.</li>
+                <li>Explained technical concepts through hands-on guidance.</li>
+            </ul>
+        </div>
+
+        <div class="resume-card">
+            <h2>Technical Skills</h2>
+
+            <div class="skills-grid">
+
+                <div>
+                    <h3>Networking</h3>
+                    <p>Linux, OSPF, ACLs, NAT, VPN, SSH, FTPS/SFTP</p>
+                </div>
+
+                <div>
+                    <h3>Security</h3>
+                    <p>Firewalls, Access Control, System Hardening</p>
+                </div>
+
+                <div>
+                    <h3>Programming</h3>
+                    <p>Python, Java, PHP, JavaScript, SQL</p>
+                </div>
+
+                <div>
+                    <h3>Tools</h3>
+                    <p>GitLab, Jira, Tableau, Power BI</p>
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </div>
+</section>
+<section class="contact-section" id="contact">
+
+    <div class="contact-container">
+
+        <div class="contact-left">
+
+            <h1>CONTACT ME</h1>
+
+            <p>
+                Looking for a Network Technician, Linux Administrator,
+                or Full Stack Developer?
+            </p>
+
+            <div class="contact-info">
+                <div class="info-card">
+                    📧 akashrana387@gmail.com
+                </div>
+
+                <div class="info-card">
+                    📍 Windsor, Ontario
+                </div>
+
+                <div class="info-card">
+                    💼 Available for Opportunities
+                </div>
+            </div>
+
+        </div>
+
+        <div class="contact-right">
+
+            <div class="terminal-header">
+                Connection Terminal
+            </div>
+
+            <form method="post">
+                {% csrf_token %}
+                <input
+                    type="text"
+                    placeholder="Your Name"
+                    required
+                    name="name"
+                >
+
+                <input
+                    type="email"
+                    placeholder="Email Address"
+                    required
+                    name="email"
+                >
+
+                <textarea
+                    placeholder="Type your message..."
+                    rows="6"
+                    required
+                    name="message"
+                ></textarea>
+
+                <button type="submit">
+                    Send Message
+                </button>
+                {% if messages %}
+    {% for message in messages %}
+        <div class="alert {{ message.tags }}">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+</body>
+<script>
+        function scrollToAbout() {
+        const section = document.getElementById("about");
+
+        window.scrollTo({
+        top: section.offsetTop - 80,
+        behavior: "smooth"
+    });
+    }
+       function scrollToResume() {
+        const section = document.getElementById("resume");
+
+        window.scrollTo({
+        top: section.offsetTop - 80,
+        behavior: "smooth"
+    });
+    }
+      function scrollToContact() {
+        const section = document.getElementById("contact");
+
+        window.scrollTo({
+        top: section.offsetTop - 80,
+        behavior: "smooth"
+    });
+    }
+function shuffleCards() {
+    const deck = document.querySelector(".deck");
+    const firstCard = deck.firstElementChild;
+
+    firstCard.style.transform =
+        "translateX(600px) rotate(20deg)";
+
+    setTimeout(() => {
+        deck.appendChild(firstCard);
+        firstCard.style.transform = "";
+        updateDeck();
+    }, 800);
+}
+
+function updateDeck() {
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach((card, index) => {
+        card.style.zIndex = cards.length - index;
+
+        const rotations = [0, -3, 3, -2];
+        card.style.transform =
+            `rotate(${rotations[index] || 0}deg)
+             translateY(${index * 10}px)`;
+    });
+}
+
+setInterval(shuffleCards, 3000);
+const resumeSection = document.getElementById("resume");
+const downloadBtn = document.getElementById("download-btn");
+
+let timerStarted = false;
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting && !timerStarted){
+
+            timerStarted = true;
+
+            setTimeout(() => {
+                downloadBtn.classList.add("show");
+            }, 2000);
+        }
+
+    });
+
+}, {
+    threshold: 0.5
+});
+
+observer.observe(resumeSection);
+const roles = [
+    "Network Technician",
+    "Linux Administrator",
+    "Full Stack Developer",
+    "Cybersecurity Enthusiast"
+];
+
+let roleIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+const typedText = document.getElementById("typed-text");
+
+function typeEffect(){
+
+    const current = roles[roleIndex];
+
+    if(!deleting){
+        typedText.textContent =
+            current.substring(0, charIndex++);
+
+        if(charIndex > current.length){
+            deleting = true;
+            setTimeout(typeEffect, 1500);
+            return;
+        }
+    }
+    else{
+        typedText.textContent =
+            current.substring(0, charIndex--);
+
+        if(charIndex < 0){
+            deleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+        }
+    }
+
+    setTimeout(typeEffect, deleting ? 40 : 80);
+}
+
+typeEffect();
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const particles = [];
+
+for(let i=0;i<100;i++){
+    particles.push({
+        x:Math.random()*canvas.width,
+        y:Math.random()*canvas.height,
+        dx:(Math.random()-0.5)*1,
+        dy:(Math.random()-0.5)*1,
+        size:2
+    });
+}
+
+function animate(){
+
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    particles.forEach(p=>{
+
+        p.x += p.dx;
+        p.y += p.dy;
+
+        if(p.x<0 || p.x>canvas.width) p.dx*=-1;
+        if(p.y<0 || p.y>canvas.height) p.dy*=-1;
+
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
+        ctx.fillStyle="#38bdf8";
+        ctx.fill();
+    });
+
+    requestAnimationFrame(animate);
+}
+
+animate();
+
+window.addEventListener("resize",()=>{
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
+const text =
+"> Secure connection established...";
+
+let i = 0;
+
+function typeTerminal(){
+
+    if(i < text.length){
+
+        document
+        .getElementById("terminal-text")
+        .innerHTML += text.charAt(i);
+
+        i++;
+
+        setTimeout(typeTerminal,50);
+    }
+}
+
+typeTerminal();
+</script>
+</html>
+
