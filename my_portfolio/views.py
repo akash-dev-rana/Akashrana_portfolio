@@ -18,13 +18,19 @@ def contacts(request):
                 Email: {email}
                 Message: {message}
                 """
-        send_mail(
-            subject="New Portfolio Contact Form Message",
-            message=full_message,
-            from_email=settings.EMAIL_HOST_USER,
-            recipient_list=["terrorking487@gmail.com"],
-        )
-        messages.success(request, " Your message has been sent successfully!")
+        try:
+            send_mail(
+                full_message,
+                settings.EMAIL_HOST_USER,
+                [settings.EMAIL_HOST_USER],
+                fail_silently=False,
+            )
+            messages.success(request, "Message sent successfully!")
+        except Exception as e:
+            print("EMAIL ERROR:", e)
+            messages.error(request, "Message could not be sent. Please try again later.")
+
+        return redirect("/")
     return render(request,"index.html")
 
 
