@@ -13,6 +13,14 @@ def contacts(request):
         message = request.POST.get('message','')
         date =  datetime.today()
         print(name)
+        full_message = f"""
+        Name: {name}
+        Email: {email}
+
+        Message:
+        {message}
+        """
+
         try:
             email_message = EmailMessage(
                 subject=f"Portfolio Contact Form - {name}",
