@@ -8,10 +8,10 @@
 </head>
 <style>
     * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
 body {
     font-family: Arial, sans-serif;
@@ -116,6 +116,7 @@ nav a div {
     animation:fadeIn 2s ease;
 }
 
+
 .typing{
     margin-top:20px;
     color:white;
@@ -189,14 +190,122 @@ nav a div {
 
 .floating-skills span:nth-child(7){
     bottom:25%;
-    right:35%;
+    right:30%;
 }
 
 .floating-skills span:nth-child(8){
     top:50%;
-    left:5%;
+    left:23%;
+}
+.floating-skills span:nth-child(9){
+    top:12%;
+    left:40%;
 }
 
+.floating-skills span:nth-child(10){
+    top:40%;
+    right:8%;
+}
+
+.floating-skills span:nth-child(11){
+    top:55%;
+    left:18%;
+}
+
+.floating-skills span:nth-child(12){
+    top:80%;
+    left:12%;
+}
+
+.floating-skills span:nth-child(13){
+    top:72%;
+    right:8%;
+}
+
+.floating-skills span:nth-child(14){
+    top:18%;
+    left:75%;
+}
+
+.floating-skills span:nth-child(15){
+    top:25%;
+    left:60%;
+}
+
+.floating-skills span:nth-child(16){
+    top:88%;
+    right:22%;
+}
+
+.floating-skills span:nth-child(17){
+    top:45%;
+    left:6%;
+}
+
+.floating-skills span:nth-child(18){
+    top:32%;
+    right:32%;
+}
+
+.floating-skills span:nth-child(19){
+    top:68%;
+    left:40%;
+}
+
+.floating-skills span:nth-child(20){
+    top:92%;
+    left:55%;
+}
+
+.floating-skills span:nth-child(21){
+    top:46%;
+    left:14%;
+}
+
+.floating-skills span:nth-child(22){
+    top:52%;
+    right:65%;
+}
+
+.floating-skills span:nth-child(23){
+    top:36%;
+    left:72%;
+}
+
+.floating-skills span:nth-child(24){
+    top:26%;
+    left:82%;
+}
+
+.floating-skills span:nth-child(25){
+    top:60%;
+    right:18%;
+}
+
+.floating-skills span:nth-child(26){
+    top:38%;
+    left:55%;
+}
+
+.floating-skills span:nth-child(27){
+    top:83%;
+    right:38%;
+}
+
+.floating-skills span:nth-child(28){
+    top:55%;
+    left:8%;
+}
+
+.floating-skills span:nth-child(29){
+    top:48%;
+    left:90%;
+}
+
+.floating-skills span:nth-child(30){
+    top:60%;
+    right:5%;
+}
 @keyframes float{
     0%,100%{
         transform:translateY(0);
@@ -634,6 +743,104 @@ button:hover{
         opacity:1;
     }
 }
+@media (max-width: 768px) {
+
+    nav {
+        background: #0f172a;
+        align-items: center;
+        font-size: 14px;
+    }
+
+    nav a {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    nav div {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    nav a[style] {
+        padding: 6px !important;
+    }
+
+    .hero {
+        min-height: 100vh;
+        height: auto;
+        padding: 120px 18px 60px;
+        overflow: hidden;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .hero-name {
+        font-size: clamp(2.8rem, 18vw, 4.5rem);
+        letter-spacing: 4px;
+        max-width: 100%;
+        overflow-wrap: normal;
+        white-space: nowrap;
+        transform: none;
+    }
+
+    .typing {
+        font-size: 1.3rem;
+        min-height: 35px;
+    }
+
+    .hero-desc {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        max-width: 320px;
+        margin: 15px auto 0;
+    }
+
+    .floating-skills span {
+        font-size: 0.85rem;
+    }
+
+    .explore-btn {
+        padding: 13px 24px;
+        margin-top: 25px;
+    }
+
+    .contact-section {
+        min-height: auto;
+        padding: 80px 18px;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .contact-left,
+    .contact-right {
+        width: 100%;
+    }
+
+    .contact-left h1 {
+        font-size: 2.4rem;
+    }
+
+    .contact-right {
+        padding: 22px;
+    }
+
+    input,
+    textarea,
+    button {
+        width: 100%;
+        font-size: 16px;
+    }
+}
 </style>
 <body>
     <nav>
@@ -641,7 +848,7 @@ button:hover{
         <div>
         <a  style="padding: 15px;" class="resume" onclick="scrollToResume()">Resume</a>
         <a  style="padding: 15px;" class="mywork" onclick="scrollToAbout()">myWork</a>
-        <a  class="contact" onclick="scrollToContact()">Contact</a>
+        <a  style="padding: 15px;" class="contact" onclick="scrollToContact()">Contact</a>
         </div>
     </nav>
 
@@ -659,7 +866,7 @@ button:hover{
         </h2>
 
         <p class="hero-desc">
-            Network Technician • Linux Administrator • Full Stack Developer
+            Network Technician • Linux Administrator • Full Stack Developer  • Software Developer • Cybersecurity Enthusiast
         </p>
 
         <button class="explore-btn" onclick="scrollToAbout()">
@@ -669,15 +876,37 @@ button:hover{
     </div>
 
     <div class="floating-skills">
-        <span>Linux</span>
-        <span>Python</span>
-        <span>Django</span>
-        <span>Java</span>
-        <span>Networking</span>
-        <span>Security</span>
-        <span>SQL</span>
-        <span>PHP</span>
-    </div>
+    <span>Linux</span>
+    <span>Python</span>
+    <span>PowerShell</span>
+    <span>Django</span>
+    <span>Java</span>
+    <span>JavaScript</span>
+    <span>Networking</span>
+    <span>SQL</span>
+    <span>PHP</span>
+    <span>Cybersecurity</span>
+    <span>OSPF</span>
+    <span>VPN</span>
+    <span>SSH</span>
+    <span>ACLs</span>
+    <span>NAT</span>
+    <span>Firewalls</span>
+    <span>HTML/CSS</span>
+    <span>Git</span>
+    <span>API</span>
+    <span>Virtualization</span>
+    <span>Hyper-V</span>
+    <span>Active Directory</span>
+    <span>MariaDB</span>
+    <span>Agile</span>
+    <span>SDLC</span>
+    <span>Jira</span>
+    <span>Power BI</span>
+    <span>Tableau</span>
+    <span>Problem Solving</span>
+    <span>Critical Thinking</span>
+</div>
 
 </section>
     <section class="cont" id="about">
@@ -719,7 +948,7 @@ button:hover{
     <div class="image-box">Task Manager</div>
     <div class="card_content">
       <div class="desc">A productivity tool for managing daily tasks.
-        <ul>
+        <ul style=" font-size: 13px;">
             <li>Python</li>
             <li>OOP</li>
             <li>JSON</li>
@@ -730,19 +959,32 @@ button:hover{
   </div>
 
   <div class="card">
-    <div class="image-box">Project 4</div>
+    <div class="image-box">Internal Project Inventory System</div>
     <div class="card_content">
-      <div class="title">Chat UI</div>
-      <div class="desc">A clean chat interface design concept.</div>
+      <div class="title"></div>
+      <div class="desc"> Manage project records securely
+                while maintaining controlled file uploads and user access.</div>
+        <ul style=" font-size: 13px;">
+            <li>Apache</li>
+            <li>PHP</li>
+            <li>MariaDB</li>
+        </ul>
       <a class="btn" href="https://github.com/yourusername" target="_blank">View GitHub</a>
     </div>
   </div>
 
   <div class="card">
-    <div class="image-box">Project 5</div>
+    <div class="image-box">Network Configuration & Security</div>
     <div class="card_content">
-      <div class="title">Dashboard</div>
-      <div class="desc">Analytics dashboard with modern UI components.</div>
+      <div class="title"></div>
+      <div class="desc">Configured and secured enterprise network.
+          </div>
+        <ul style=" font-size: 13px;">
+            <li>OSPF</li>
+            <li>NAT</li>
+            <li>ACL</li>
+            <li>VPN</li>
+        </ul>
       <a class="btn" href="https://github.com/yourusername" target="_blank">View GitHub</a>
     </div>
   </div>
@@ -831,7 +1073,7 @@ button:hover{
         </div>
 
         <div class="resume-card">
-            <h2>Network Configuration & Security Lab</h2>
+            <h2>Network Configuration & Security </h2>
 
             <h3>Situation</h3>
             <p>
@@ -1031,18 +1273,7 @@ function shuffleCards() {
     }, 800);
 }
 
-function updateDeck() {
-    const cards = document.querySelectorAll(".card");
 
-    cards.forEach((card, index) => {
-        card.style.zIndex = cards.length - index;
-
-        const rotations = [0, -3, 3, -2];
-        card.style.transform =
-            `rotate(${rotations[index] || 0}deg)
-             translateY(${index * 10}px)`;
-    });
-}
 
 setInterval(shuffleCards, 3000);
 const resumeSection = document.getElementById("resume");
@@ -1074,6 +1305,9 @@ const roles = [
     "Network Technician",
     "Linux Administrator",
     "Full Stack Developer",
+    "System Administrator",
+    "HelpDesk Technician",
+    "Software Developer",
     "Cybersecurity Enthusiast"
 ];
 
@@ -1123,8 +1357,8 @@ for(let i=0;i<100;i++){
     particles.push({
         x:Math.random()*canvas.width,
         y:Math.random()*canvas.height,
-        dx:(Math.random()-0.5)*1,
-        dy:(Math.random()-0.5)*1,
+        dx:(Math.random()-0.8)*1,
+        dy:(Math.random()-0.8)*1,
         size:2
     });
 }
