@@ -1,25 +1,21 @@
-from django.shortcuts import render, HttpResponse, redirect
-from datetime import datetime
-from .models import contact
 from django.core.mail import EmailMessage
 from django.conf import settings
 from django.contrib import messages
-# Create your views here.
+from django.shortcuts import render, redirect
 
 def contacts(request):
-    if(request.method == "POST"):
-        name = request.POST.get('name','')
-        email = request.POST.get('email','')
-        message = request.POST.get('message','')
-        date =  datetime.today()
-        print(name)
-        full_message = f"""
-        Name: {name}
-        Email: {email}
+    if request.method == "POST":
+        name = request.POST.get("name", "")
+        email = request.POST.get("email", "")
+        message = request.POST.get("message", "")
 
-        Message:
-        {message}
-        """
+        full_message = f"""
+                        Name: {name}
+                        Email: {email}
+
+                        Message:
+                            {message}
+                        """
 
         try:
             email_message = EmailMessage(
@@ -29,17 +25,13 @@ def contacts(request):
                 to=[settings.EMAIL_HOST_USER],
                 reply_to=[email],
             )
-
             email_message.send(fail_silently=False)
-
             messages.success(request, "Message sent successfully!")
 
         except Exception as e:
             print("EMAIL ERROR:", e)
-            messages.error(request, "Message could not be sent. Please try again later.")
+            messages.error(request, f"Message could not be sent: {e}")
 
         return redirect("/")
 
-        return render(request, "index.html")
-
-
+    return render(request, "index.html")
